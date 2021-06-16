@@ -11,7 +11,10 @@
 # a separate helper file that requires the additional dependencies and performs
 # the additional setup, and require it from the spec files that actually need
 # it.
-#
+#require 'webmock/rspec'
+require 'simplecov'
+SimpleCov.start 'rails'
+SimpleCov.add_filter ['spec', 'config', 'app/channels/application_cable', 'jobs', 'mailers']
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -94,10 +97,5 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-  Shoulda::Matchers.configure do |config|
-    config.integrate do |with|
-      with.test_framework :rspec
-      with.library :rails
-    end
-  end
+
 end
