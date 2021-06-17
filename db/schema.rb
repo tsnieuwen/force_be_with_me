@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_16_152816) do
+ActiveRecord::Schema.define(version: 2021_06_17_005108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,6 @@ ActiveRecord::Schema.define(version: 2021_06_16_152816) do
 
   create_table "searches", force: :cascade do |t|
     t.string "name"
-    t.integer "height"
-    t.integer "mass"
     t.string "hair_color"
     t.string "skin_color"
     t.string "eye_color"
@@ -39,6 +37,10 @@ ActiveRecord::Schema.define(version: 2021_06_16_152816) do
     t.string "gender"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "taller_than"
+    t.integer "shorter_than"
+    t.integer "heavier_than"
+    t.integer "lighter_than"
   end
 
 end
