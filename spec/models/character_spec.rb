@@ -44,7 +44,6 @@ RSpec.describe Character, type: :model do
     #   taller = 200
     #   shorter = 230
     #   filter_characters = @characters.height_search(taller, shorter)
-    #   require "pry"; binding.pry
     # end
 
 
