@@ -1,0 +1,432 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://swapi.dev/api/people/?page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.1
+      Date:
+      - Thu, 17 Jun 2021 13:44:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"35e90fa80df5a1200859818a74a65a4e"'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"count":82,"next":"http://swapi.dev/api/people/?page=2","previous":null,"results":[{"name":"Luke
+        Skywalker","height":"172","mass":"77","hair_color":"blond","skin_color":"fair","eye_color":"blue","birth_year":"19BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":["http://swapi.dev/api/vehicles/14/","http://swapi.dev/api/vehicles/30/"],"starships":["http://swapi.dev/api/starships/12/","http://swapi.dev/api/starships/22/"],"created":"2014-12-09T13:50:51.644000Z","edited":"2014-12-20T21:17:56.891000Z","url":"http://swapi.dev/api/people/1/"},{"name":"C-3PO","height":"167","mass":"75","hair_color":"n/a","skin_color":"gold","eye_color":"yellow","birth_year":"112BBY","gender":"n/a","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/4/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":["http://swapi.dev/api/species/2/"],"vehicles":[],"starships":[],"created":"2014-12-10T15:10:51.357000Z","edited":"2014-12-20T21:17:50.309000Z","url":"http://swapi.dev/api/people/2/"},{"name":"R2-D2","height":"96","mass":"32","hair_color":"n/a","skin_color":"white,
+        blue","eye_color":"red","birth_year":"33BBY","gender":"n/a","homeworld":"http://swapi.dev/api/planets/8/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/4/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":["http://swapi.dev/api/species/2/"],"vehicles":[],"starships":[],"created":"2014-12-10T15:11:50.376000Z","edited":"2014-12-20T21:17:50.311000Z","url":"http://swapi.dev/api/people/3/"},{"name":"Darth
+        Vader","height":"202","mass":"136","hair_color":"none","skin_color":"white","eye_color":"yellow","birth_year":"41.9BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":[],"starships":["http://swapi.dev/api/starships/13/"],"created":"2014-12-10T15:18:20.704000Z","edited":"2014-12-20T21:17:50.313000Z","url":"http://swapi.dev/api/people/4/"},{"name":"Leia
+        Organa","height":"150","mass":"49","hair_color":"brown","skin_color":"light","eye_color":"brown","birth_year":"19BBY","gender":"female","homeworld":"http://swapi.dev/api/planets/2/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":["http://swapi.dev/api/vehicles/30/"],"starships":[],"created":"2014-12-10T15:20:09.791000Z","edited":"2014-12-20T21:17:50.315000Z","url":"http://swapi.dev/api/people/5/"},{"name":"Owen
+        Lars","height":"178","mass":"120","hair_color":"brown, grey","skin_color":"light","eye_color":"blue","birth_year":"52BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-10T15:52:14.024000Z","edited":"2014-12-20T21:17:50.317000Z","url":"http://swapi.dev/api/people/6/"},{"name":"Beru
+        Whitesun lars","height":"165","mass":"75","hair_color":"brown","skin_color":"light","eye_color":"blue","birth_year":"47BBY","gender":"female","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-10T15:53:41.121000Z","edited":"2014-12-20T21:17:50.319000Z","url":"http://swapi.dev/api/people/7/"},{"name":"R5-D4","height":"97","mass":"32","hair_color":"n/a","skin_color":"white,
+        red","eye_color":"red","birth_year":"unknown","gender":"n/a","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/1/"],"species":["http://swapi.dev/api/species/2/"],"vehicles":[],"starships":[],"created":"2014-12-10T15:57:50.959000Z","edited":"2014-12-20T21:17:50.321000Z","url":"http://swapi.dev/api/people/8/"},{"name":"Biggs
+        Darklighter","height":"183","mass":"84","hair_color":"black","skin_color":"light","eye_color":"brown","birth_year":"24BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/1/"],"species":[],"vehicles":[],"starships":["http://swapi.dev/api/starships/12/"],"created":"2014-12-10T15:59:50.509000Z","edited":"2014-12-20T21:17:50.323000Z","url":"http://swapi.dev/api/people/9/"},{"name":"Obi-Wan
+        Kenobi","height":"182","mass":"77","hair_color":"auburn, white","skin_color":"fair","eye_color":"blue-gray","birth_year":"57BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/20/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/4/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":["http://swapi.dev/api/vehicles/38/"],"starships":["http://swapi.dev/api/starships/48/","http://swapi.dev/api/starships/59/","http://swapi.dev/api/starships/64/","http://swapi.dev/api/starships/65/","http://swapi.dev/api/starships/74/"],"created":"2014-12-10T16:16:29.192000Z","edited":"2014-12-20T21:17:50.325000Z","url":"http://swapi.dev/api/people/10/"}]}'
+  recorded_at: Thu, 17 Jun 2021 13:44:05 GMT
+- request:
+    method: get
+    uri: https://swapi.dev/api/people/?page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.1
+      Date:
+      - Thu, 17 Jun 2021 13:44:06 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"30e4996d6e3b97e4c3650b17be9a5f3c"'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"count":82,"next":"http://swapi.dev/api/people/?page=3","previous":"http://swapi.dev/api/people/?page=1","results":[{"name":"Anakin
+        Skywalker","height":"188","mass":"84","hair_color":"blond","skin_color":"fair","eye_color":"blue","birth_year":"41.9BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/4/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":["http://swapi.dev/api/vehicles/44/","http://swapi.dev/api/vehicles/46/"],"starships":["http://swapi.dev/api/starships/39/","http://swapi.dev/api/starships/59/","http://swapi.dev/api/starships/65/"],"created":"2014-12-10T16:20:44.310000Z","edited":"2014-12-20T21:17:50.327000Z","url":"http://swapi.dev/api/people/11/"},{"name":"Wilhuff
+        Tarkin","height":"180","mass":"unknown","hair_color":"auburn, grey","skin_color":"fair","eye_color":"blue","birth_year":"64BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/21/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-10T16:26:56.138000Z","edited":"2014-12-20T21:17:50.330000Z","url":"http://swapi.dev/api/people/12/"},{"name":"Chewbacca","height":"228","mass":"112","hair_color":"brown","skin_color":"unknown","eye_color":"blue","birth_year":"200BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/14/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/6/"],"species":["http://swapi.dev/api/species/3/"],"vehicles":["http://swapi.dev/api/vehicles/19/"],"starships":["http://swapi.dev/api/starships/10/","http://swapi.dev/api/starships/22/"],"created":"2014-12-10T16:42:45.066000Z","edited":"2014-12-20T21:17:50.332000Z","url":"http://swapi.dev/api/people/13/"},{"name":"Han
+        Solo","height":"180","mass":"80","hair_color":"brown","skin_color":"fair","eye_color":"brown","birth_year":"29BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/22/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/"],"species":[],"vehicles":[],"starships":["http://swapi.dev/api/starships/10/","http://swapi.dev/api/starships/22/"],"created":"2014-12-10T16:49:14.582000Z","edited":"2014-12-20T21:17:50.334000Z","url":"http://swapi.dev/api/people/14/"},{"name":"Greedo","height":"173","mass":"74","hair_color":"n/a","skin_color":"green","eye_color":"black","birth_year":"44BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/23/","films":["http://swapi.dev/api/films/1/"],"species":["http://swapi.dev/api/species/4/"],"vehicles":[],"starships":[],"created":"2014-12-10T17:03:30.334000Z","edited":"2014-12-20T21:17:50.336000Z","url":"http://swapi.dev/api/people/15/"},{"name":"Jabba
+        Desilijic Tiure","height":"175","mass":"1,358","hair_color":"n/a","skin_color":"green-tan,
+        brown","eye_color":"orange","birth_year":"600BBY","gender":"hermaphrodite","homeworld":"http://swapi.dev/api/planets/24/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/4/"],"species":["http://swapi.dev/api/species/5/"],"vehicles":[],"starships":[],"created":"2014-12-10T17:11:31.638000Z","edited":"2014-12-20T21:17:50.338000Z","url":"http://swapi.dev/api/people/16/"},{"name":"Wedge
+        Antilles","height":"170","mass":"77","hair_color":"brown","skin_color":"fair","eye_color":"hazel","birth_year":"21BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/22/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/"],"species":[],"vehicles":["http://swapi.dev/api/vehicles/14/"],"starships":["http://swapi.dev/api/starships/12/"],"created":"2014-12-12T11:08:06.469000Z","edited":"2014-12-20T21:17:50.341000Z","url":"http://swapi.dev/api/people/18/"},{"name":"Jek
+        Tono Porkins","height":"180","mass":"110","hair_color":"brown","skin_color":"fair","eye_color":"blue","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/26/","films":["http://swapi.dev/api/films/1/"],"species":[],"vehicles":[],"starships":["http://swapi.dev/api/starships/12/"],"created":"2014-12-12T11:16:56.569000Z","edited":"2014-12-20T21:17:50.343000Z","url":"http://swapi.dev/api/people/19/"},{"name":"Yoda","height":"66","mass":"17","hair_color":"white","skin_color":"green","eye_color":"brown","birth_year":"896BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/28/","films":["http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/4/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":["http://swapi.dev/api/species/6/"],"vehicles":[],"starships":[],"created":"2014-12-15T12:26:01.042000Z","edited":"2014-12-20T21:17:50.345000Z","url":"http://swapi.dev/api/people/20/"},{"name":"Palpatine","height":"170","mass":"75","hair_color":"grey","skin_color":"pale","eye_color":"yellow","birth_year":"82BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/8/","films":["http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/4/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-15T12:48:05.971000Z","edited":"2014-12-20T21:17:50.347000Z","url":"http://swapi.dev/api/people/21/"}]}'
+  recorded_at: Thu, 17 Jun 2021 13:44:06 GMT
+- request:
+    method: get
+    uri: https://swapi.dev/api/people/?page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.1
+      Date:
+      - Thu, 17 Jun 2021 13:44:06 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"292f59c11060322f9af5d067ee1854ac"'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"count":82,"next":"http://swapi.dev/api/people/?page=4","previous":"http://swapi.dev/api/people/?page=2","results":[{"name":"Boba
+        Fett","height":"183","mass":"78.2","hair_color":"black","skin_color":"fair","eye_color":"brown","birth_year":"31.5BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/10/","films":["http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/5/"],"species":[],"vehicles":[],"starships":["http://swapi.dev/api/starships/21/"],"created":"2014-12-15T12:49:32.457000Z","edited":"2014-12-20T21:17:50.349000Z","url":"http://swapi.dev/api/people/22/"},{"name":"IG-88","height":"200","mass":"140","hair_color":"none","skin_color":"metal","eye_color":"red","birth_year":"15BBY","gender":"none","homeworld":"http://swapi.dev/api/planets/28/","films":["http://swapi.dev/api/films/2/"],"species":["http://swapi.dev/api/species/2/"],"vehicles":[],"starships":[],"created":"2014-12-15T12:51:10.076000Z","edited":"2014-12-20T21:17:50.351000Z","url":"http://swapi.dev/api/people/23/"},{"name":"Bossk","height":"190","mass":"113","hair_color":"none","skin_color":"green","eye_color":"red","birth_year":"53BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/29/","films":["http://swapi.dev/api/films/2/"],"species":["http://swapi.dev/api/species/7/"],"vehicles":[],"starships":[],"created":"2014-12-15T12:53:49.297000Z","edited":"2014-12-20T21:17:50.355000Z","url":"http://swapi.dev/api/people/24/"},{"name":"Lando
+        Calrissian","height":"177","mass":"79","hair_color":"black","skin_color":"dark","eye_color":"brown","birth_year":"31BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/30/","films":["http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/"],"species":[],"vehicles":[],"starships":["http://swapi.dev/api/starships/10/"],"created":"2014-12-15T12:56:32.683000Z","edited":"2014-12-20T21:17:50.357000Z","url":"http://swapi.dev/api/people/25/"},{"name":"Lobot","height":"175","mass":"79","hair_color":"none","skin_color":"light","eye_color":"blue","birth_year":"37BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/6/","films":["http://swapi.dev/api/films/2/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-15T13:01:57.178000Z","edited":"2014-12-20T21:17:50.359000Z","url":"http://swapi.dev/api/people/26/"},{"name":"Ackbar","height":"180","mass":"83","hair_color":"none","skin_color":"brown
+        mottle","eye_color":"orange","birth_year":"41BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/31/","films":["http://swapi.dev/api/films/3/"],"species":["http://swapi.dev/api/species/8/"],"vehicles":[],"starships":[],"created":"2014-12-18T11:07:50.584000Z","edited":"2014-12-20T21:17:50.362000Z","url":"http://swapi.dev/api/people/27/"},{"name":"Mon
+        Mothma","height":"150","mass":"unknown","hair_color":"auburn","skin_color":"fair","eye_color":"blue","birth_year":"48BBY","gender":"female","homeworld":"http://swapi.dev/api/planets/32/","films":["http://swapi.dev/api/films/3/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-18T11:12:38.895000Z","edited":"2014-12-20T21:17:50.364000Z","url":"http://swapi.dev/api/people/28/"},{"name":"Arvel
+        Crynyd","height":"unknown","mass":"unknown","hair_color":"brown","skin_color":"fair","eye_color":"brown","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/28/","films":["http://swapi.dev/api/films/3/"],"species":[],"vehicles":[],"starships":["http://swapi.dev/api/starships/28/"],"created":"2014-12-18T11:16:33.020000Z","edited":"2014-12-20T21:17:50.367000Z","url":"http://swapi.dev/api/people/29/"},{"name":"Wicket
+        Systri Warrick","height":"88","mass":"20","hair_color":"brown","skin_color":"brown","eye_color":"brown","birth_year":"8BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/7/","films":["http://swapi.dev/api/films/3/"],"species":["http://swapi.dev/api/species/9/"],"vehicles":[],"starships":[],"created":"2014-12-18T11:21:58.954000Z","edited":"2014-12-20T21:17:50.369000Z","url":"http://swapi.dev/api/people/30/"},{"name":"Nien
+        Nunb","height":"160","mass":"68","hair_color":"none","skin_color":"grey","eye_color":"black","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/33/","films":["http://swapi.dev/api/films/3/"],"species":["http://swapi.dev/api/species/10/"],"vehicles":[],"starships":["http://swapi.dev/api/starships/10/"],"created":"2014-12-18T11:26:18.541000Z","edited":"2014-12-20T21:17:50.371000Z","url":"http://swapi.dev/api/people/31/"}]}'
+  recorded_at: Thu, 17 Jun 2021 13:44:06 GMT
+- request:
+    method: get
+    uri: https://swapi.dev/api/people/?page=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.1
+      Date:
+      - Thu, 17 Jun 2021 13:44:07 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"61226db906fb7d61117c4684260b2ae8"'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb3VudCI6ODIsIm5leHQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvP3BhZ2U9NSIsInByZXZpb3VzIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLz9wYWdlPTMiLCJyZXN1bHRzIjpbeyJuYW1lIjoiUXVpLUdvbiBKaW5uIiwiaGVpZ2h0IjoiMTkzIiwibWFzcyI6Ijg5IiwiaGFpcl9jb2xvciI6ImJyb3duIiwic2tpbl9jb2xvciI6ImZhaXIiLCJleWVfY29sb3IiOiJibHVlIiwiYmlydGhfeWVhciI6IjkyQkJZIiwiZ2VuZGVyIjoibWFsZSIsImhvbWV3b3JsZCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3BsYW5ldHMvMjgvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNC8iXSwic3BlY2llcyI6W10sInZlaGljbGVzIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL3ZlaGljbGVzLzM4LyJdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0xOVQxNjo1NDo1My42MTgwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC4zNzUwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzMyLyJ9LHsibmFtZSI6Ik51dGUgR3VucmF5IiwiaGVpZ2h0IjoiMTkxIiwibWFzcyI6IjkwIiwiaGFpcl9jb2xvciI6Im5vbmUiLCJza2luX2NvbG9yIjoibW90dGxlZCBncmVlbiIsImV5ZV9jb2xvciI6InJlZCIsImJpcnRoX3llYXIiOiJ1bmtub3duIiwiZ2VuZGVyIjoibWFsZSIsImhvbWV3b3JsZCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3BsYW5ldHMvMTgvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNC8iLCJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy81LyIsImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzYvIl0sInNwZWNpZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3BlY2llcy8xMS8iXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0xOVQxNzowNTo1Ny4zNTcwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC4zNzcwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzMzLyJ9LHsibmFtZSI6IkZpbmlzIFZhbG9ydW0iLCJoZWlnaHQiOiIxNzAiLCJtYXNzIjoidW5rbm93biIsImhhaXJfY29sb3IiOiJibG9uZCIsInNraW5fY29sb3IiOiJmYWlyIiwiZXllX2NvbG9yIjoiYmx1ZSIsImJpcnRoX3llYXIiOiI5MUJCWSIsImdlbmRlciI6Im1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzkvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNC8iXSwic3BlY2llcyI6W10sInZlaGljbGVzIjpbXSwic3RhcnNoaXBzIjpbXSwiY3JlYXRlZCI6IjIwMTQtMTItMTlUMTc6MjE6NDUuOTE1MDAwWiIsImVkaXRlZCI6IjIwMTQtMTItMjBUMjE6MTc6NTAuMzc5MDAwWiIsInVybCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3Blb3BsZS8zNC8ifSx7Im5hbWUiOiJQYWRtw6kgQW1pZGFsYSIsImhlaWdodCI6IjE4NSIsIm1hc3MiOiI0NSIsImhhaXJfY29sb3IiOiJicm93biIsInNraW5fY29sb3IiOiJsaWdodCIsImV5ZV9jb2xvciI6ImJyb3duIiwiYmlydGhfeWVhciI6IjQ2QkJZIiwiZ2VuZGVyIjoiZmVtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy84LyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzQvIiwiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNS8iLCJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy82LyJdLCJzcGVjaWVzIjpbXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3RhcnNoaXBzLzM5LyIsImh0dHA6Ly9zd2FwaS5kZXYvYXBpL3N0YXJzaGlwcy80OS8iLCJodHRwOi8vc3dhcGkuZGV2L2FwaS9zdGFyc2hpcHMvNjQvIl0sImNyZWF0ZWQiOiIyMDE0LTEyLTE5VDE3OjI4OjI2LjkyNjAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjM4MTAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvMzUvIn0seyJuYW1lIjoiSmFyIEphciBCaW5rcyIsImhlaWdodCI6IjE5NiIsIm1hc3MiOiI2NiIsImhhaXJfY29sb3IiOiJub25lIiwic2tpbl9jb2xvciI6Im9yYW5nZSIsImV5ZV9jb2xvciI6Im9yYW5nZSIsImJpcnRoX3llYXIiOiI1MkJCWSIsImdlbmRlciI6Im1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzgvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNC8iLCJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy81LyJdLCJzcGVjaWVzIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL3NwZWNpZXMvMTIvIl0sInZlaGljbGVzIjpbXSwic3RhcnNoaXBzIjpbXSwiY3JlYXRlZCI6IjIwMTQtMTItMTlUMTc6Mjk6MzIuNDg5MDAwWiIsImVkaXRlZCI6IjIwMTQtMTItMjBUMjE6MTc6NTAuMzgzMDAwWiIsInVybCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3Blb3BsZS8zNi8ifSx7Im5hbWUiOiJSb29zIFRhcnBhbHMiLCJoZWlnaHQiOiIyMjQiLCJtYXNzIjoiODIiLCJoYWlyX2NvbG9yIjoibm9uZSIsInNraW5fY29sb3IiOiJncmV5IiwiZXllX2NvbG9yIjoib3JhbmdlIiwiYmlydGhfeWVhciI6InVua25vd24iLCJnZW5kZXIiOiJtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy84LyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzQvIl0sInNwZWNpZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3BlY2llcy8xMi8iXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0xOVQxNzozMjo1Ni43NDEwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC4zODUwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzM3LyJ9LHsibmFtZSI6IlJ1Z29yIE5hc3MiLCJoZWlnaHQiOiIyMDYiLCJtYXNzIjoidW5rbm93biIsImhhaXJfY29sb3IiOiJub25lIiwic2tpbl9jb2xvciI6ImdyZWVuIiwiZXllX2NvbG9yIjoib3JhbmdlIiwiYmlydGhfeWVhciI6InVua25vd24iLCJnZW5kZXIiOiJtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy84LyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzQvIl0sInNwZWNpZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3BlY2llcy8xMi8iXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0xOVQxNzozMzozOC45MDkwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC4zODgwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzM4LyJ9LHsibmFtZSI6IlJpYyBPbGnDqSIsImhlaWdodCI6IjE4MyIsIm1hc3MiOiJ1bmtub3duIiwiaGFpcl9jb2xvciI6ImJyb3duIiwic2tpbl9jb2xvciI6ImZhaXIiLCJleWVfY29sb3IiOiJibHVlIiwiYmlydGhfeWVhciI6InVua25vd24iLCJnZW5kZXIiOiJtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy84LyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzQvIl0sInNwZWNpZXMiOltdLCJ2ZWhpY2xlcyI6W10sInN0YXJzaGlwcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9zdGFyc2hpcHMvNDAvIl0sImNyZWF0ZWQiOiIyMDE0LTEyLTE5VDE3OjQ1OjAxLjUyMjAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjM5MjAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvMzkvIn0seyJuYW1lIjoiV2F0dG8iLCJoZWlnaHQiOiIxMzciLCJtYXNzIjoidW5rbm93biIsImhhaXJfY29sb3IiOiJibGFjayIsInNraW5fY29sb3IiOiJibHVlLCBncmV5IiwiZXllX2NvbG9yIjoieWVsbG93IiwiYmlydGhfeWVhciI6InVua25vd24iLCJnZW5kZXIiOiJtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy8zNC8iLCJmaWxtcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy80LyIsImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzUvIl0sInNwZWNpZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3BlY2llcy8xMy8iXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0xOVQxNzo0ODo1NC42NDcwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC4zOTUwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzQwLyJ9LHsibmFtZSI6IlNlYnVsYmEiLCJoZWlnaHQiOiIxMTIiLCJtYXNzIjoiNDAiLCJoYWlyX2NvbG9yIjoibm9uZSIsInNraW5fY29sb3IiOiJncmV5LCByZWQiLCJleWVfY29sb3IiOiJvcmFuZ2UiLCJiaXJ0aF95ZWFyIjoidW5rbm93biIsImdlbmRlciI6Im1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzM1LyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzQvIl0sInNwZWNpZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3BlY2llcy8xNC8iXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0xOVQxNzo1MzowMi41ODYwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC4zOTcwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzQxLyJ9XX0=
+  recorded_at: Thu, 17 Jun 2021 13:44:07 GMT
+- request:
+    method: get
+    uri: https://swapi.dev/api/people/?page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.1
+      Date:
+      - Thu, 17 Jun 2021 13:44:08 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"219387faa37d0650411aa3814d5334aa"'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"count":82,"next":"http://swapi.dev/api/people/?page=6","previous":"http://swapi.dev/api/people/?page=4","results":[{"name":"Quarsh
+        Panaka","height":"183","mass":"unknown","hair_color":"black","skin_color":"dark","eye_color":"brown","birth_year":"62BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/8/","films":["http://swapi.dev/api/films/4/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-19T17:55:43.348000Z","edited":"2014-12-20T21:17:50.399000Z","url":"http://swapi.dev/api/people/42/"},{"name":"Shmi
+        Skywalker","height":"163","mass":"unknown","hair_color":"black","skin_color":"fair","eye_color":"brown","birth_year":"72BBY","gender":"female","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/4/","http://swapi.dev/api/films/5/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-19T17:57:41.191000Z","edited":"2014-12-20T21:17:50.401000Z","url":"http://swapi.dev/api/people/43/"},{"name":"Darth
+        Maul","height":"175","mass":"80","hair_color":"none","skin_color":"red","eye_color":"yellow","birth_year":"54BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/36/","films":["http://swapi.dev/api/films/4/"],"species":["http://swapi.dev/api/species/22/"],"vehicles":["http://swapi.dev/api/vehicles/42/"],"starships":["http://swapi.dev/api/starships/41/"],"created":"2014-12-19T18:00:41.929000Z","edited":"2014-12-20T21:17:50.403000Z","url":"http://swapi.dev/api/people/44/"},{"name":"Bib
+        Fortuna","height":"180","mass":"unknown","hair_color":"none","skin_color":"pale","eye_color":"pink","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/37/","films":["http://swapi.dev/api/films/3/"],"species":["http://swapi.dev/api/species/15/"],"vehicles":[],"starships":[],"created":"2014-12-20T09:47:02.512000Z","edited":"2014-12-20T21:17:50.407000Z","url":"http://swapi.dev/api/people/45/"},{"name":"Ayla
+        Secura","height":"178","mass":"55","hair_color":"none","skin_color":"blue","eye_color":"hazel","birth_year":"48BBY","gender":"female","homeworld":"http://swapi.dev/api/planets/37/","films":["http://swapi.dev/api/films/4/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":["http://swapi.dev/api/species/15/"],"vehicles":[],"starships":[],"created":"2014-12-20T09:48:01.172000Z","edited":"2014-12-20T21:17:50.409000Z","url":"http://swapi.dev/api/people/46/"},{"name":"Ratts
+        Tyerel","height":"79","mass":"15","hair_color":"none","skin_color":"grey,
+        blue","eye_color":"unknown","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/38/","films":["http://swapi.dev/api/films/4/"],"species":["http://swapi.dev/api/species/16/"],"vehicles":[],"starships":[],"created":"2014-12-20T09:53:15.086000Z","edited":"2014-12-20T21:17:50.410000Z","url":"http://swapi.dev/api/people/47/"},{"name":"Dud
+        Bolt","height":"94","mass":"45","hair_color":"none","skin_color":"blue, grey","eye_color":"yellow","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/39/","films":["http://swapi.dev/api/films/4/"],"species":["http://swapi.dev/api/species/17/"],"vehicles":[],"starships":[],"created":"2014-12-20T09:57:31.858000Z","edited":"2014-12-20T21:17:50.414000Z","url":"http://swapi.dev/api/people/48/"},{"name":"Gasgano","height":"122","mass":"unknown","hair_color":"none","skin_color":"white,
+        blue","eye_color":"black","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/40/","films":["http://swapi.dev/api/films/4/"],"species":["http://swapi.dev/api/species/18/"],"vehicles":[],"starships":[],"created":"2014-12-20T10:02:12.223000Z","edited":"2014-12-20T21:17:50.416000Z","url":"http://swapi.dev/api/people/49/"},{"name":"Ben
+        Quadinaros","height":"163","mass":"65","hair_color":"none","skin_color":"grey,
+        green, yellow","eye_color":"orange","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/41/","films":["http://swapi.dev/api/films/4/"],"species":["http://swapi.dev/api/species/19/"],"vehicles":[],"starships":[],"created":"2014-12-20T10:08:33.777000Z","edited":"2014-12-20T21:17:50.417000Z","url":"http://swapi.dev/api/people/50/"},{"name":"Mace
+        Windu","height":"188","mass":"84","hair_color":"none","skin_color":"dark","eye_color":"brown","birth_year":"72BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/42/","films":["http://swapi.dev/api/films/4/","http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-20T10:12:30.846000Z","edited":"2014-12-20T21:17:50.420000Z","url":"http://swapi.dev/api/people/51/"}]}'
+  recorded_at: Thu, 17 Jun 2021 13:44:08 GMT
+- request:
+    method: get
+    uri: https://swapi.dev/api/people/?page=6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.1
+      Date:
+      - Thu, 17 Jun 2021 13:44:08 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"c5b8a532b059c0e85b177f24cac8e09e"'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb3VudCI6ODIsIm5leHQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvP3BhZ2U9NyIsInByZXZpb3VzIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLz9wYWdlPTUiLCJyZXN1bHRzIjpbeyJuYW1lIjoiS2ktQWRpLU11bmRpIiwiaGVpZ2h0IjoiMTk4IiwibWFzcyI6IjgyIiwiaGFpcl9jb2xvciI6IndoaXRlIiwic2tpbl9jb2xvciI6InBhbGUiLCJleWVfY29sb3IiOiJ5ZWxsb3ciLCJiaXJ0aF95ZWFyIjoiOTJCQlkiLCJnZW5kZXIiOiJtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy80My8iLCJmaWxtcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy80LyIsImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzUvIiwiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNi8iXSwic3BlY2llcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9zcGVjaWVzLzIwLyJdLCJ2ZWhpY2xlcyI6W10sInN0YXJzaGlwcyI6W10sImNyZWF0ZWQiOiIyMDE0LTEyLTIwVDEwOjE1OjMyLjI5MzAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjQyMjAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvNTIvIn0seyJuYW1lIjoiS2l0IEZpc3RvIiwiaGVpZ2h0IjoiMTk2IiwibWFzcyI6Ijg3IiwiaGFpcl9jb2xvciI6Im5vbmUiLCJza2luX2NvbG9yIjoiZ3JlZW4iLCJleWVfY29sb3IiOiJibGFjayIsImJpcnRoX3llYXIiOiJ1bmtub3duIiwiZ2VuZGVyIjoibWFsZSIsImhvbWV3b3JsZCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3BsYW5ldHMvNDQvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNC8iLCJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy81LyIsImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzYvIl0sInNwZWNpZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3BlY2llcy8yMS8iXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0yMFQxMDoxODo1Ny4yMDIwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC40MjQwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzUzLyJ9LHsibmFtZSI6IkVldGggS290aCIsImhlaWdodCI6IjE3MSIsIm1hc3MiOiJ1bmtub3duIiwiaGFpcl9jb2xvciI6ImJsYWNrIiwic2tpbl9jb2xvciI6ImJyb3duIiwiZXllX2NvbG9yIjoiYnJvd24iLCJiaXJ0aF95ZWFyIjoidW5rbm93biIsImdlbmRlciI6Im1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzQ1LyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzQvIiwiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNi8iXSwic3BlY2llcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9zcGVjaWVzLzIyLyJdLCJ2ZWhpY2xlcyI6W10sInN0YXJzaGlwcyI6W10sImNyZWF0ZWQiOiIyMDE0LTEyLTIwVDEwOjI2OjQ3LjkwMjAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjQyNzAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvNTQvIn0seyJuYW1lIjoiQWRpIEdhbGxpYSIsImhlaWdodCI6IjE4NCIsIm1hc3MiOiI1MCIsImhhaXJfY29sb3IiOiJub25lIiwic2tpbl9jb2xvciI6ImRhcmsiLCJleWVfY29sb3IiOiJibHVlIiwiYmlydGhfeWVhciI6InVua25vd24iLCJnZW5kZXIiOiJmZW1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzkvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNC8iLCJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy82LyJdLCJzcGVjaWVzIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL3NwZWNpZXMvMjMvIl0sInZlaGljbGVzIjpbXSwic3RhcnNoaXBzIjpbXSwiY3JlYXRlZCI6IjIwMTQtMTItMjBUMTA6Mjk6MTEuNjYxMDAwWiIsImVkaXRlZCI6IjIwMTQtMTItMjBUMjE6MTc6NTAuNDMyMDAwWiIsInVybCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3Blb3BsZS81NS8ifSx7Im5hbWUiOiJTYWVzZWUgVGlpbiIsImhlaWdodCI6IjE4OCIsIm1hc3MiOiJ1bmtub3duIiwiaGFpcl9jb2xvciI6Im5vbmUiLCJza2luX2NvbG9yIjoicGFsZSIsImV5ZV9jb2xvciI6Im9yYW5nZSIsImJpcnRoX3llYXIiOiJ1bmtub3duIiwiZ2VuZGVyIjoibWFsZSIsImhvbWV3b3JsZCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3BsYW5ldHMvNDcvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNC8iLCJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy82LyJdLCJzcGVjaWVzIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL3NwZWNpZXMvMjQvIl0sInZlaGljbGVzIjpbXSwic3RhcnNoaXBzIjpbXSwiY3JlYXRlZCI6IjIwMTQtMTItMjBUMTA6MzI6MTEuNjY5MDAwWiIsImVkaXRlZCI6IjIwMTQtMTItMjBUMjE6MTc6NTAuNDM0MDAwWiIsInVybCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3Blb3BsZS81Ni8ifSx7Im5hbWUiOiJZYXJhZWwgUG9vZiIsImhlaWdodCI6IjI2NCIsIm1hc3MiOiJ1bmtub3duIiwiaGFpcl9jb2xvciI6Im5vbmUiLCJza2luX2NvbG9yIjoid2hpdGUiLCJleWVfY29sb3IiOiJ5ZWxsb3ciLCJiaXJ0aF95ZWFyIjoidW5rbm93biIsImdlbmRlciI6Im1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzQ4LyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzQvIl0sInNwZWNpZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3BlY2llcy8yNS8iXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0yMFQxMDozNDo0OC43MjUwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC40MzcwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzU3LyJ9LHsibmFtZSI6IlBsbyBLb29uIiwiaGVpZ2h0IjoiMTg4IiwibWFzcyI6IjgwIiwiaGFpcl9jb2xvciI6Im5vbmUiLCJza2luX2NvbG9yIjoib3JhbmdlIiwiZXllX2NvbG9yIjoiYmxhY2siLCJiaXJ0aF95ZWFyIjoiMjJCQlkiLCJnZW5kZXIiOiJtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy80OS8iLCJmaWxtcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy80LyIsImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzUvIiwiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNi8iXSwic3BlY2llcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9zcGVjaWVzLzI2LyJdLCJ2ZWhpY2xlcyI6W10sInN0YXJzaGlwcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9zdGFyc2hpcHMvNDgvIl0sImNyZWF0ZWQiOiIyMDE0LTEyLTIwVDEwOjQ5OjE5Ljg1OTAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjQzOTAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvNTgvIn0seyJuYW1lIjoiTWFzIEFtZWRkYSIsImhlaWdodCI6IjE5NiIsIm1hc3MiOiJ1bmtub3duIiwiaGFpcl9jb2xvciI6Im5vbmUiLCJza2luX2NvbG9yIjoiYmx1ZSIsImV5ZV9jb2xvciI6ImJsdWUiLCJiaXJ0aF95ZWFyIjoidW5rbm93biIsImdlbmRlciI6Im1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzUwLyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzQvIiwiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNS8iXSwic3BlY2llcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9zcGVjaWVzLzI3LyJdLCJ2ZWhpY2xlcyI6W10sInN0YXJzaGlwcyI6W10sImNyZWF0ZWQiOiIyMDE0LTEyLTIwVDEwOjUzOjI2LjQ1NzAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjQ0MjAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvNTkvIn0seyJuYW1lIjoiR3JlZ2FyIFR5cGhvIiwiaGVpZ2h0IjoiMTg1IiwibWFzcyI6Ijg1IiwiaGFpcl9jb2xvciI6ImJsYWNrIiwic2tpbl9jb2xvciI6ImRhcmsiLCJleWVfY29sb3IiOiJicm93biIsImJpcnRoX3llYXIiOiJ1bmtub3duIiwiZ2VuZGVyIjoibWFsZSIsImhvbWV3b3JsZCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3BsYW5ldHMvOC8iLCJmaWxtcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy81LyJdLCJzcGVjaWVzIjpbXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3RhcnNoaXBzLzM5LyJdLCJjcmVhdGVkIjoiMjAxNC0xMi0yMFQxMToxMDoxMC4zODEwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC40NDUwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzYwLyJ9LHsibmFtZSI6IkNvcmTDqSIsImhlaWdodCI6IjE1NyIsIm1hc3MiOiJ1bmtub3duIiwiaGFpcl9jb2xvciI6ImJyb3duIiwic2tpbl9jb2xvciI6ImxpZ2h0IiwiZXllX2NvbG9yIjoiYnJvd24iLCJiaXJ0aF95ZWFyIjoidW5rbm93biIsImdlbmRlciI6ImZlbWFsZSIsImhvbWV3b3JsZCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3BsYW5ldHMvOC8iLCJmaWxtcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy81LyJdLCJzcGVjaWVzIjpbXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0yMFQxMToxMTozOS42MzAwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC40NDkwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzYxLyJ9XX0=
+  recorded_at: Thu, 17 Jun 2021 13:44:08 GMT
+- request:
+    method: get
+    uri: https://swapi.dev/api/people/?page=7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.1
+      Date:
+      - Thu, 17 Jun 2021 13:44:09 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"263c5af58e466351029702e4255b9ce3"'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb3VudCI6ODIsIm5leHQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvP3BhZ2U9OCIsInByZXZpb3VzIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLz9wYWdlPTYiLCJyZXN1bHRzIjpbeyJuYW1lIjoiQ2xpZWdnIExhcnMiLCJoZWlnaHQiOiIxODMiLCJtYXNzIjoidW5rbm93biIsImhhaXJfY29sb3IiOiJicm93biIsInNraW5fY29sb3IiOiJmYWlyIiwiZXllX2NvbG9yIjoiYmx1ZSIsImJpcnRoX3llYXIiOiI4MkJCWSIsImdlbmRlciI6Im1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzEvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNS8iXSwic3BlY2llcyI6W10sInZlaGljbGVzIjpbXSwic3RhcnNoaXBzIjpbXSwiY3JlYXRlZCI6IjIwMTQtMTItMjBUMTU6NTk6MDMuOTU4MDAwWiIsImVkaXRlZCI6IjIwMTQtMTItMjBUMjE6MTc6NTAuNDUxMDAwWiIsInVybCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3Blb3BsZS82Mi8ifSx7Im5hbWUiOiJQb2dnbGUgdGhlIExlc3NlciIsImhlaWdodCI6IjE4MyIsIm1hc3MiOiI4MCIsImhhaXJfY29sb3IiOiJub25lIiwic2tpbl9jb2xvciI6ImdyZWVuIiwiZXllX2NvbG9yIjoieWVsbG93IiwiYmlydGhfeWVhciI6InVua25vd24iLCJnZW5kZXIiOiJtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy8xMS8iLCJmaWxtcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy81LyIsImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzYvIl0sInNwZWNpZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3BlY2llcy8yOC8iXSwidmVoaWNsZXMiOltdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0yMFQxNjo0MDo0My45NzcwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC40NTMwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzYzLyJ9LHsibmFtZSI6Ikx1bWluYXJhIFVuZHVsaSIsImhlaWdodCI6IjE3MCIsIm1hc3MiOiI1Ni4yIiwiaGFpcl9jb2xvciI6ImJsYWNrIiwic2tpbl9jb2xvciI6InllbGxvdyIsImV5ZV9jb2xvciI6ImJsdWUiLCJiaXJ0aF95ZWFyIjoiNThCQlkiLCJnZW5kZXIiOiJmZW1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzUxLyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzUvIiwiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNi8iXSwic3BlY2llcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9zcGVjaWVzLzI5LyJdLCJ2ZWhpY2xlcyI6W10sInN0YXJzaGlwcyI6W10sImNyZWF0ZWQiOiIyMDE0LTEyLTIwVDE2OjQ1OjUzLjY2ODAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjQ1NTAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvNjQvIn0seyJuYW1lIjoiQmFycmlzcyBPZmZlZSIsImhlaWdodCI6IjE2NiIsIm1hc3MiOiI1MCIsImhhaXJfY29sb3IiOiJibGFjayIsInNraW5fY29sb3IiOiJ5ZWxsb3ciLCJleWVfY29sb3IiOiJibHVlIiwiYmlydGhfeWVhciI6IjQwQkJZIiwiZ2VuZGVyIjoiZmVtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy81MS8iLCJmaWxtcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy81LyJdLCJzcGVjaWVzIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL3NwZWNpZXMvMjkvIl0sInZlaGljbGVzIjpbXSwic3RhcnNoaXBzIjpbXSwiY3JlYXRlZCI6IjIwMTQtMTItMjBUMTY6NDY6NDAuNDQwMDAwWiIsImVkaXRlZCI6IjIwMTQtMTItMjBUMjE6MTc6NTAuNDU3MDAwWiIsInVybCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3Blb3BsZS82NS8ifSx7Im5hbWUiOiJEb3Jtw6kiLCJoZWlnaHQiOiIxNjUiLCJtYXNzIjoidW5rbm93biIsImhhaXJfY29sb3IiOiJicm93biIsInNraW5fY29sb3IiOiJsaWdodCIsImV5ZV9jb2xvciI6ImJyb3duIiwiYmlydGhfeWVhciI6InVua25vd24iLCJnZW5kZXIiOiJmZW1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzgvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNS8iXSwic3BlY2llcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9zcGVjaWVzLzEvIl0sInZlaGljbGVzIjpbXSwic3RhcnNoaXBzIjpbXSwiY3JlYXRlZCI6IjIwMTQtMTItMjBUMTY6NDk6MTQuNjQwMDAwWiIsImVkaXRlZCI6IjIwMTQtMTItMjBUMjE6MTc6NTAuNDYwMDAwWiIsInVybCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3Blb3BsZS82Ni8ifSx7Im5hbWUiOiJEb29rdSIsImhlaWdodCI6IjE5MyIsIm1hc3MiOiI4MCIsImhhaXJfY29sb3IiOiJ3aGl0ZSIsInNraW5fY29sb3IiOiJmYWlyIiwiZXllX2NvbG9yIjoiYnJvd24iLCJiaXJ0aF95ZWFyIjoiMTAyQkJZIiwiZ2VuZGVyIjoibWFsZSIsImhvbWV3b3JsZCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3BsYW5ldHMvNTIvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNS8iLCJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy82LyJdLCJzcGVjaWVzIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL3NwZWNpZXMvMS8iXSwidmVoaWNsZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvdmVoaWNsZXMvNTUvIl0sInN0YXJzaGlwcyI6W10sImNyZWF0ZWQiOiIyMDE0LTEyLTIwVDE2OjUyOjE0LjcyNjAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjQ2MjAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvNjcvIn0seyJuYW1lIjoiQmFpbCBQcmVzdG9yIE9yZ2FuYSIsImhlaWdodCI6IjE5MSIsIm1hc3MiOiJ1bmtub3duIiwiaGFpcl9jb2xvciI6ImJsYWNrIiwic2tpbl9jb2xvciI6InRhbiIsImV5ZV9jb2xvciI6ImJyb3duIiwiYmlydGhfeWVhciI6IjY3QkJZIiwiZ2VuZGVyIjoibWFsZSIsImhvbWV3b3JsZCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3BsYW5ldHMvMi8iLCJmaWxtcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy81LyIsImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzYvIl0sInNwZWNpZXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvc3BlY2llcy8xLyJdLCJ2ZWhpY2xlcyI6W10sInN0YXJzaGlwcyI6W10sImNyZWF0ZWQiOiIyMDE0LTEyLTIwVDE2OjUzOjA4LjU3NTAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjQ2MzAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvNjgvIn0seyJuYW1lIjoiSmFuZ28gRmV0dCIsImhlaWdodCI6IjE4MyIsIm1hc3MiOiI3OSIsImhhaXJfY29sb3IiOiJibGFjayIsInNraW5fY29sb3IiOiJ0YW4iLCJleWVfY29sb3IiOiJicm93biIsImJpcnRoX3llYXIiOiI2NkJCWSIsImdlbmRlciI6Im1hbGUiLCJob21ld29ybGQiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wbGFuZXRzLzUzLyIsImZpbG1zIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL2ZpbG1zLzUvIl0sInNwZWNpZXMiOltdLCJ2ZWhpY2xlcyI6W10sInN0YXJzaGlwcyI6W10sImNyZWF0ZWQiOiIyMDE0LTEyLTIwVDE2OjU0OjQxLjYyMDAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjQ2NTAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvNjkvIn0seyJuYW1lIjoiWmFtIFdlc2VsbCIsImhlaWdodCI6IjE2OCIsIm1hc3MiOiI1NSIsImhhaXJfY29sb3IiOiJibG9uZGUiLCJza2luX2NvbG9yIjoiZmFpciwgZ3JlZW4sIHllbGxvdyIsImV5ZV9jb2xvciI6InllbGxvdyIsImJpcnRoX3llYXIiOiJ1bmtub3duIiwiZ2VuZGVyIjoiZmVtYWxlIiwiaG9tZXdvcmxkIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGxhbmV0cy81NC8iLCJmaWxtcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9maWxtcy81LyJdLCJzcGVjaWVzIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL3NwZWNpZXMvMzAvIl0sInZlaGljbGVzIjpbImh0dHA6Ly9zd2FwaS5kZXYvYXBpL3ZlaGljbGVzLzQ1LyJdLCJzdGFyc2hpcHMiOltdLCJjcmVhdGVkIjoiMjAxNC0xMi0yMFQxNjo1Nzo0NC40NzEwMDBaIiwiZWRpdGVkIjoiMjAxNC0xMi0yMFQyMToxNzo1MC40NjgwMDBaIiwidXJsIjoiaHR0cDovL3N3YXBpLmRldi9hcGkvcGVvcGxlLzcwLyJ9LHsibmFtZSI6IkRleHRlciBKZXR0c3RlciIsImhlaWdodCI6IjE5OCIsIm1hc3MiOiIxMDIiLCJoYWlyX2NvbG9yIjoibm9uZSIsInNraW5fY29sb3IiOiJicm93biIsImV5ZV9jb2xvciI6InllbGxvdyIsImJpcnRoX3llYXIiOiJ1bmtub3duIiwiZ2VuZGVyIjoibWFsZSIsImhvbWV3b3JsZCI6Imh0dHA6Ly9zd2FwaS5kZXYvYXBpL3BsYW5ldHMvNTUvIiwiZmlsbXMiOlsiaHR0cDovL3N3YXBpLmRldi9hcGkvZmlsbXMvNS8iXSwic3BlY2llcyI6WyJodHRwOi8vc3dhcGkuZGV2L2FwaS9zcGVjaWVzLzMxLyJdLCJ2ZWhpY2xlcyI6W10sInN0YXJzaGlwcyI6W10sImNyZWF0ZWQiOiIyMDE0LTEyLTIwVDE3OjI4OjI3LjI0ODAwMFoiLCJlZGl0ZWQiOiIyMDE0LTEyLTIwVDIxOjE3OjUwLjQ3MDAwMFoiLCJ1cmwiOiJodHRwOi8vc3dhcGkuZGV2L2FwaS9wZW9wbGUvNzEvIn1dfQ==
+  recorded_at: Thu, 17 Jun 2021 13:44:09 GMT
+- request:
+    method: get
+    uri: https://swapi.dev/api/people/?page=8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.1
+      Date:
+      - Thu, 17 Jun 2021 13:44:10 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"f97dc6bda40cf13cbc89a7801254cad3"'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"count":82,"next":"http://swapi.dev/api/people/?page=9","previous":"http://swapi.dev/api/people/?page=7","results":[{"name":"Lama
+        Su","height":"229","mass":"88","hair_color":"none","skin_color":"grey","eye_color":"black","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/10/","films":["http://swapi.dev/api/films/5/"],"species":["http://swapi.dev/api/species/32/"],"vehicles":[],"starships":[],"created":"2014-12-20T17:30:50.416000Z","edited":"2014-12-20T21:17:50.473000Z","url":"http://swapi.dev/api/people/72/"},{"name":"Taun
+        We","height":"213","mass":"unknown","hair_color":"none","skin_color":"grey","eye_color":"black","birth_year":"unknown","gender":"female","homeworld":"http://swapi.dev/api/planets/10/","films":["http://swapi.dev/api/films/5/"],"species":["http://swapi.dev/api/species/32/"],"vehicles":[],"starships":[],"created":"2014-12-20T17:31:21.195000Z","edited":"2014-12-20T21:17:50.474000Z","url":"http://swapi.dev/api/people/73/"},{"name":"Jocasta
+        Nu","height":"167","mass":"unknown","hair_color":"white","skin_color":"fair","eye_color":"blue","birth_year":"unknown","gender":"female","homeworld":"http://swapi.dev/api/planets/9/","films":["http://swapi.dev/api/films/5/"],"species":["http://swapi.dev/api/species/1/"],"vehicles":[],"starships":[],"created":"2014-12-20T17:32:51.996000Z","edited":"2014-12-20T21:17:50.476000Z","url":"http://swapi.dev/api/people/74/"},{"name":"R4-P17","height":"96","mass":"unknown","hair_color":"none","skin_color":"silver,
+        red","eye_color":"red, blue","birth_year":"unknown","gender":"female","homeworld":"http://swapi.dev/api/planets/28/","films":["http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-20T17:43:36.409000Z","edited":"2014-12-20T21:17:50.478000Z","url":"http://swapi.dev/api/people/75/"},{"name":"Wat
+        Tambor","height":"193","mass":"48","hair_color":"none","skin_color":"green,
+        grey","eye_color":"unknown","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/56/","films":["http://swapi.dev/api/films/5/"],"species":["http://swapi.dev/api/species/33/"],"vehicles":[],"starships":[],"created":"2014-12-20T17:53:52.607000Z","edited":"2014-12-20T21:17:50.481000Z","url":"http://swapi.dev/api/people/76/"},{"name":"San
+        Hill","height":"191","mass":"unknown","hair_color":"none","skin_color":"grey","eye_color":"gold","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/57/","films":["http://swapi.dev/api/films/5/"],"species":["http://swapi.dev/api/species/34/"],"vehicles":[],"starships":[],"created":"2014-12-20T17:58:17.049000Z","edited":"2014-12-20T21:17:50.484000Z","url":"http://swapi.dev/api/people/77/"},{"name":"Shaak
+        Ti","height":"178","mass":"57","hair_color":"none","skin_color":"red, blue,
+        white","eye_color":"black","birth_year":"unknown","gender":"female","homeworld":"http://swapi.dev/api/planets/58/","films":["http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":["http://swapi.dev/api/species/35/"],"vehicles":[],"starships":[],"created":"2014-12-20T18:44:01.103000Z","edited":"2014-12-20T21:17:50.486000Z","url":"http://swapi.dev/api/people/78/"},{"name":"Grievous","height":"216","mass":"159","hair_color":"none","skin_color":"brown,
+        white","eye_color":"green, yellow","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/59/","films":["http://swapi.dev/api/films/6/"],"species":["http://swapi.dev/api/species/36/"],"vehicles":["http://swapi.dev/api/vehicles/60/"],"starships":["http://swapi.dev/api/starships/74/"],"created":"2014-12-20T19:43:53.348000Z","edited":"2014-12-20T21:17:50.488000Z","url":"http://swapi.dev/api/people/79/"},{"name":"Tarfful","height":"234","mass":"136","hair_color":"brown","skin_color":"brown","eye_color":"blue","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/14/","films":["http://swapi.dev/api/films/6/"],"species":["http://swapi.dev/api/species/3/"],"vehicles":[],"starships":[],"created":"2014-12-20T19:46:34.209000Z","edited":"2014-12-20T21:17:50.491000Z","url":"http://swapi.dev/api/people/80/"},{"name":"Raymus
+        Antilles","height":"188","mass":"79","hair_color":"brown","skin_color":"light","eye_color":"brown","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/2/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-20T19:49:35.583000Z","edited":"2014-12-20T21:17:50.493000Z","url":"http://swapi.dev/api/people/81/"}]}'
+  recorded_at: Thu, 17 Jun 2021 13:44:10 GMT
+- request:
+    method: get
+    uri: https://swapi.dev/api/people/?page=9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.4.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.1
+      Date:
+      - Thu, 17 Jun 2021 13:44:10 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept, Cookie
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"0ae8bcb7170d257c7f5f78cf13f7d9d7"'
+      Allow:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"count":82,"next":null,"previous":"http://swapi.dev/api/people/?page=8","results":[{"name":"Sly
+        Moore","height":"178","mass":"48","hair_color":"none","skin_color":"pale","eye_color":"white","birth_year":"unknown","gender":"female","homeworld":"http://swapi.dev/api/planets/60/","films":["http://swapi.dev/api/films/5/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":[],"starships":[],"created":"2014-12-20T20:18:37.619000Z","edited":"2014-12-20T21:17:50.496000Z","url":"http://swapi.dev/api/people/82/"},{"name":"Tion
+        Medon","height":"206","mass":"80","hair_color":"none","skin_color":"grey","eye_color":"black","birth_year":"unknown","gender":"male","homeworld":"http://swapi.dev/api/planets/12/","films":["http://swapi.dev/api/films/6/"],"species":["http://swapi.dev/api/species/37/"],"vehicles":[],"starships":[],"created":"2014-12-20T20:35:04.260000Z","edited":"2014-12-20T21:17:50.498000Z","url":"http://swapi.dev/api/people/83/"}]}'
+  recorded_at: Thu, 17 Jun 2021 13:44:10 GMT
+recorded_with: VCR 6.0.0

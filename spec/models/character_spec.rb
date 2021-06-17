@@ -30,4 +30,23 @@ RSpec.describe Character, type: :model do
       expect(character2.save).to eq(false)
     end
   end
+
+  describe 'class methods' do
+    before(:each) do
+      VCR.use_cassette('characters_filter') do
+        Character.destroy_all
+        CharactersFacade.import_characters
+        @characters = Character.all
+      end
+    end
+
+    it '.height_search' do
+      taller = 200
+      shorter = 230
+      filter_characters = @characters.height_search(taller, shorter)
+      require "pry"; binding.pry
+    end
+
+
+  end
 end

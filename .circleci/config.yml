@@ -1,0 +1,27 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+jobs:
+  build:
+    working_directory: ~/force_be_with_me
+    docker:
+      - image: circleci/ruby:2.5.3
+        environment:
+          PGHOST: localhost
+          PGUSER: force_be_with_me
+          RAILS_ENV: test
+      - image: postgres:13.2
+        environment:
+          POSTGRES_USER: force_be_with_me
+          POSTGRES_DB: force_be_with_me_test
+          POSTGRES_PASSWORD:
+    steps:
+      - checkout
+      - run:
+          name: force_be_with_me
+          command: bundle -v
+      - ruby/bundle-install
+      - checkout
+      - run: bundle install --path vendor/bundle
+      - run: bundle exec rake db:setup
+      - run: bundle exec rspec
