@@ -3,6 +3,7 @@ class Api::V1::Characters::SearchesController < ApplicationController
   def create
     Search.create(search_params)
     searched_characters = Character.discover_characters(search_params)
+    render json: CharactersSerializer.new(searched_characters)
   end
 
   private
@@ -18,4 +19,5 @@ class Api::V1::Characters::SearchesController < ApplicationController
                   :eye_color,
                   :birth_year,
                   :gender)
+  end
 end
