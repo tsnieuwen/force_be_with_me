@@ -46,6 +46,10 @@ RSpec.describe Character, type: :model do
     #   filter_characters = @characters.height_search(taller, shorter)
     # end
 
+    it '.discover_characters' do
+      
+    end
+
 
   end
 end
