@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Search, type: :model do
+  before(:each) do
+    Search.destroy_all
+  end
 
   describe "validations" do
     it { should validate_uniqueness_of(:name).scoped_to(:heavier_than,
@@ -12,9 +15,14 @@ RSpec.describe Search, type: :model do
                                                         :eye_color,
                                                         :birth_year,
                                                         :gender) }
+    it {should validate_numericality_of(:heavier_than) }
+    it {should validate_numericality_of(:lighter_than) }
+    it {should validate_numericality_of(:taller_than) }
+    it {should validate_numericality_of(:shorter_than) }
   end
 
   it "happy path creates a search record" do
+    require "pry"; binding.pry
     search = Search.new(name: "Luke", taller_than: 23)
     expect(search.save).to eq(true)
   end

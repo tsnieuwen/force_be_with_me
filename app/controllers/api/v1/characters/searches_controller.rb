@@ -1,9 +1,13 @@
 class Api::V1::Characters::SearchesController < ApplicationController
 
   def create
-    Search.create(search_params)
-    searched_characters = Character.discover_characters(search_params)
-    render json: CharactersSerializer.new(searched_characters)
+    if Search.create(search_params)
+      searched_characters = Character.discover_characters(search_params)
+      render json: CharactersSerializer.new(searched_characters)
+    else
+      render json:
+    end 
+
   end
 
   private
