@@ -8,7 +8,6 @@ class Api::V1::Characters::SearchesController < ApplicationController
     else
       render json: "Search could not be executed", status: 400
     end
-
   end
 
   private

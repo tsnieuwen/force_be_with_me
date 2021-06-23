@@ -8,7 +8,6 @@ describe "Post searches" do
       CharactersFacade.import_characters
       @characters = Character.all
     end
-
   end
 
   let(:valid_headers) do
