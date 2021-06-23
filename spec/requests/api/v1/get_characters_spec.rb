@@ -108,5 +108,4 @@ describe "Get characters" do
     expect(body[:data].last[:id].to_i).to eq(@characters[19].id)
   end
 
-
 end
