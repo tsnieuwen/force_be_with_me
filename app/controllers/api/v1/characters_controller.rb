@@ -5,19 +5,18 @@ class Api::V1::CharactersController < ApplicationController
     render json: CharactersSerializer.new(@characters)
   end
 
-
   private
 
   def per_page
-    if params[:per_page]
-      params[:per_page]
+    if params[:per_page].to_i != 0
+      params[:per_page].to_i
     else
       20
     end
   end
 
   def page_offset
-    if !params[:page]
+    if !params[:page] || params[:page].to_i == 0
       nil
     elsif params[:page].to_i <= 0
       0
