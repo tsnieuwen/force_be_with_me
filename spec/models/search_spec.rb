@@ -22,7 +22,6 @@ RSpec.describe Search, type: :model do
   end
 
   it "happy path creates a search record" do
-    require "pry"; binding.pry
     search = Search.new(name: "Luke", taller_than: 23)
     expect(search.save).to eq(true)
   end
