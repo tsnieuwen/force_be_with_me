@@ -40,16 +40,83 @@ RSpec.describe Character, type: :model do
       end
     end
 
-    # it '.height_search' do
-    #   taller = 200
-    #   shorter = 230
-    #   filter_characters = @characters.height_search(taller, shorter)
-    # end
-
-    it '.discover_characters' do
-      
+    it '.taller_search happy path' do
+      pre_char_count = Character.count
+      minimum_height = Character.minimum(:height)
+      search_criteria = minimum_height + 15
+      filtered_characters = @characters.taller_search(search_criteria)
+      expect(filtered_characters.count).to be < pre_char_count
+      expect(filtered_characters.minimum(:height)).to be >= search_criteria
     end
 
+    it '.shorter_search happy path' do
+      pre_char_count = Character.count
+      maximum_height = Character.maximum(:height)
+      search_criteria = maximum_height - 15
+      filtered_characters = @characters.shorter_search(search_criteria)
+      expect(filtered_characters.count).to be < pre_char_count
+      expect(filtered_characters.maximum(:height)).to be <= maximum_height
+    end
+
+    it '.heavier_search happy path' do
+      pre_char_count = Character.count
+      minimum_mass = Character.minimum(:mass)
+      search_criteria = minimum_mass + 15
+      filtered_characters = @characters.heavier_search(search_criteria)
+      expect(filtered_characters.count).to be < pre_char_count
+      expect(filtered_characters.minimum(:mass)).to be >= search_criteria
+    end
+
+    it '.lighter_search happy path' do
+      pre_char_count = Character.count
+      maximum_mass = Character.maximum(:mass)
+      search_criteria = maximum_mass - 15
+      filtered_characters = @characters.lighter_search(search_criteria)
+      expect(filtered_characters.count).to be < pre_char_count
+      expect(filtered_characters.maximum(:mass)).to be <= maximum_mass
+    end
+
+    it '.discover_characters happy path name' do
+      search_params = {name: "Darth Vader"}
+      filtered_characters = @characters.discover_characters(search_params)
+      expect(filtered_characters.count).to eq(1)
+      expect(filtered_characters.first.name).to eq("Darth Vader")
+    end
+
+    it '.discover_characters happy path hair color' do
+      search_params = {hair_color: "white"}
+      filtered_characters = @characters.discover_characters(search_params).order(:hair_color)
+      expect(filtered_characters.first.hair_color).to eq("white")
+      expect(filtered_characters.last.hair_color).to eq("white")
+    end
+
+    it '.discover_characters happy path skin color' do
+      search_params = {skin_color: "pale"}
+      filtered_characters = @characters.discover_characters(search_params).order(:skin_color)
+      expect(filtered_characters.first.skin_color).to eq("pale")
+      expect(filtered_characters.last.skin_color).to eq("pale")
+    end
+
+    it '.discover_characters happy path eye color' do
+      search_params = {eye_color: "yellow"}
+      filtered_characters = @characters.discover_characters(search_params).order(:eye_color)
+      expect(filtered_characters.first.eye_color).to eq("yellow")
+      expect(filtered_characters.last.eye_color).to eq("yellow")
+    end
+
+    it '.discover_characters happy path birth year' do
+      search_params = {birth_year: "92BBY"}
+      filtered_characters = @characters.discover_characters(search_params).order(:birth_year)
+      expect(filtered_characters.first.birth_year).to eq("92BBY")
+      expect(filtered_characters.last.birth_year).to eq("92BBY")
+    end
+
+    it '.discover_characters happy path gender' do
+      search_params = {gender: "male"}
+      filtered_characters = @characters.discover_characters(search_params).order(:gender)
+      expect(filtered_characters.first.gender).to eq("male")
+      expect(filtered_characters.last.gender).to eq("male")
+    end
 
   end
 end
