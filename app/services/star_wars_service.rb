@@ -7,8 +7,10 @@ class StarWarsService
       response = Faraday.get(page)
       parsed = JSON.parse(response.body, symbolize_names: true)
       data << parsed[:results]
-      parsed[:next] != nil ? page = parsed[:next].insert(4, "s") : page = nil
+      parsed[:next] != nil ? page = parsed[:next] : page = nil
     end
     data.flatten
   end
+
+
 end
