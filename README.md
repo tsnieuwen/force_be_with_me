@@ -98,8 +98,16 @@ Thank you to the folks at `SWAPI` for the use of their public API. Documentation
 ### Character Model & Table
 - The Character model validates for the presence of all attributes in the schema below, and also validates for uniqueness of the name attribute. The table itself is seeded through the `CharacterFacade` and `CharacterService` files, which consume the external StarWars API.
 
+- Character table portion of schema file
+
+![](assets/README-198e961c.png)
+
 ### Search Model & Table
 - The Search model validates uniqueness of an entire record by scoping. The table is populated via the `post` api request discussed above.
+
+- Search table portion of schema file
+
+![](assets/README-809f47a1.png)
 
 ## Built With
 - Ruby 2.5.3
