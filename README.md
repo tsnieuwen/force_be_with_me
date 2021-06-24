@@ -1,4 +1,5 @@
 # Force Be With Me
+![](assets/README-98f12721.png)
 
 This API consumes an external Star Wars character API and exposes two sortable and filterable endpoints. The endpoints also return paginated results. This app is deployed to Heroku and was built using Ruby on Rails.
 
