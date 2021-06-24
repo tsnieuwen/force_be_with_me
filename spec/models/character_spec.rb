@@ -49,6 +49,13 @@ RSpec.describe Character, type: :model do
       expect(filtered_characters.minimum(:height)).to be >= search_criteria
     end
 
+    it '.taller_search sad path' do
+      pre_char_count = Character.count
+      minimum_height = Character.minimum(:height)
+      filtered_characters = @characters.taller_search("asdfsdafd")
+      expect(filtered_characters.count).to eq(pre_char_count)
+    end
+
     it '.shorter_search happy path' do
       pre_char_count = Character.count
       maximum_height = Character.maximum(:height)
@@ -56,6 +63,13 @@ RSpec.describe Character, type: :model do
       filtered_characters = @characters.shorter_search(search_criteria)
       expect(filtered_characters.count).to be < pre_char_count
       expect(filtered_characters.maximum(:height)).to be <= maximum_height
+    end
+
+    it '.shorter_search sad path' do
+      pre_char_count = Character.count
+      maximum_height = Character.maximum(:height)
+      filtered_characters = @characters.shorter_search("blue")
+      expect(filtered_characters.count).to eq(pre_char_count)
     end
 
     it '.heavier_search happy path' do
@@ -67,6 +81,13 @@ RSpec.describe Character, type: :model do
       expect(filtered_characters.minimum(:mass)).to be >= search_criteria
     end
 
+    it '.heavier_search sad path' do
+      pre_char_count = Character.count
+      minimum_mass = Character.minimum(:mass)
+      filtered_characters = @characters.heavier_search("ruby")
+      expect(filtered_characters.count).to eq(pre_char_count)
+    end
+
     it '.lighter_search happy path' do
       pre_char_count = Character.count
       maximum_mass = Character.maximum(:mass)
@@ -74,6 +95,13 @@ RSpec.describe Character, type: :model do
       filtered_characters = @characters.lighter_search(search_criteria)
       expect(filtered_characters.count).to be < pre_char_count
       expect(filtered_characters.maximum(:mass)).to be <= maximum_mass
+    end
+
+    it '.lighter_search happy path' do
+      pre_char_count = Character.count
+      maximum_mass = Character.maximum(:mass)
+      filtered_characters = @characters.lighter_search("rails")
+      expect(filtered_characters.count).to eq(pre_char_count)
     end
 
     it '.discover_characters happy path name' do

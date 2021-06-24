@@ -29,18 +29,30 @@ class Character < ApplicationRecord
   end
 
   def self.taller_search(minimum_height)
+    if minimum_height.to_i == 0
+      minimum_height = Character.minimum(:height)
+    end
     where("height >= ?", minimum_height)
   end
 
   def self.shorter_search(maximum_height)
+    if maximum_height.to_i == 0
+      maximum_height = Character.maximum(:height)
+    end
     where("height <= ?", maximum_height)
   end
 
   def self.heavier_search(minimum_mass)
+    if minimum_mass.to_i == 0
+      minimum_mass = Character.minimum(:mass)
+    end
     where("mass >= ?", minimum_mass)
   end
 
   def self.lighter_search(maximum_mass)
+    if maximum_mass.to_i == 0
+      maximum_mass = Character.maximum(:mass)
+    end
     where("mass <= ?", maximum_mass)
   end
 
