@@ -23,6 +23,8 @@ class Character < ApplicationRecord
     characters = characters.shorter_search(search[:shorter_than]) if search[:shorter_than].present?
     characters = characters.heavier_search(search[:heavier_than]) if search[:heavier_than].present?
     characters = characters.lighter_search(search[:lighter_than]) if search[:lighter_than].present?
+    characters = characters.limit(per_page(search)).offset(page_offset(search))
+    characters = characters.sort_output(search)
     return characters
   end
 
@@ -40,6 +42,44 @@ class Character < ApplicationRecord
 
   def self.lighter_search(maximum_mass)
     where("mass <= ?", maximum_mass)
+  end
+
+  def self.per_page(search)
+    if search[:per_page] && (search[:per_page].to_i != 0)
+      search[:per_page].to_i
+    else
+      20
+    end
+  end
+
+  def self.page_offset(search)
+    if !search[:page] || search[:page].to_i <= 0
+      nil
+    else
+      (search[:page].to_i - 1) * per_page(search).to_i
+    end
+  end
+
+  def self.sort_output(search)
+    order("#{valid_attribute(search)} #{asc_or_desc(search)}")
+  end
+
+  def self.valid_attribute(search)
+    character_attributes = ["name", "height", "mass", "hair_color", "skin_color", "eye_color", "birth_year", "gender"]
+    if search[:sort_by] && (character_attributes.include? search[:sort_by])
+      search[:sort_by]
+    else
+      "name"
+    end
+  end
+
+  def self.asc_or_desc(search)
+    valid_sorters = ["ASC", "DESC"]
+    if search[:sort_order] && (valid_sorters.include? search[:sort_order])
+      search[:sort_order]
+    else
+      "ASC"
+    end
   end
 
 end

@@ -1,28 +1,30 @@
 class Api::V1::CharactersController < ApplicationController
 
   def index
-    @characters = Character.limit(per_page.to_i).offset(page_offset)
-    render json: CharactersSerializer.new(@characters)
+    @characters = Character.discover_characters(character_params)
+    if @characters.empty?
+      render json: "No records matched the given search", status: 200
+    else
+      render json: CharactersSerializer.new(@characters)
+    end
   end
 
   private
 
-  def per_page
-    if params[:per_page].to_i != 0
-      params[:per_page].to_i
-    else
-      20
-    end
+  def character_params
+    params.permit(:name,
+                  :taller_than,
+                  :shorter_than,
+                  :heavier_than,
+                  :lighter_than,
+                  :hair_color,
+                  :skin_color,
+                  :eye_color,
+                  :birth_year,
+                  :gender,
+                  :sort_by,
+                  :sort_order,
+                  :per_page,
+                  :page)
   end
-
-  def page_offset
-    if !params[:page] || params[:page].to_i == 0
-      nil
-    elsif params[:page].to_i <= 0
-      0
-    else
-      (params[:page].to_i - 1) * per_page.to_i
-    end
-  end
-
 end

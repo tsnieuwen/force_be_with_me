@@ -118,5 +118,84 @@ RSpec.describe Character, type: :model do
       expect(filtered_characters.last.gender).to eq("male")
     end
 
+    it '.per_page defaults to 20 with no user input happy path' do
+      search = {}
+      expect(@characters.per_page(search)).to eq(20)
+    end
+
+    it '.per_page can take valid user input happy path' do
+      search = {per_page: 34}
+      expect(@characters.per_page(search)).to eq(34)
+    end
+
+    it '.per_page sad path defaults to 20' do
+      search = {per_page: "applesauce"}
+      expect(@characters.per_page(search)).to eq(20)
+    end
+
+    it '.page_offset defaults to nil happy path' do
+      search = {}
+      expect(@characters.page_offset(search)).to eq(nil)
+    end
+
+    it '.page_offset can take user input happy path' do
+      search = {page: 2}
+      expect(@characters.page_offset(search)).to eq(20)
+    end
+
+    it '.page_offset defaults to nil with invalid user input sad path' do
+      search = {page: "balloons"}
+      expect(@characters.page_offset(search)).to eq(nil)
+    end
+
+    it '.sort_output happy path defaults to asc by name' do
+      search = {}
+      pre_first_character = Character.order("name ASC").first.name
+      pre_last_character = Character.order("name ASC").last.name
+      expect(@characters.sort_output(search).first.name).to eq(pre_first_character)
+      expect(@characters.sort_output(search).last.name).to eq(pre_last_character)
+    end
+
+    it '.sort_output happy path takes user input' do
+      search = {sort_by: "height", sort_order: "DESC"}
+      pre_first_character = Character.maximum(:height)
+      pre_last_character = Character.minimum(:height)
+      expect(@characters.sort_output(search).first.height).to eq(pre_first_character)
+      expect(@characters.sort_output(search).last.height).to eq(pre_last_character)
+    end
+
+    it '.sort_output sad path' do
+    end
+
+    it '.valid_attributes happy path defaults to name without user input' do
+      search = {}
+      expect(@characters.valid_attribute(search)).to eq("name")
+    end
+
+    it '.valid_attributes happy path takes user input' do
+      search = {sort_by: "height"}
+      expect(@characters.valid_attribute(search)).to eq("height")
+    end
+
+    it '.valid_attributes sad path defaults to name' do
+      search = {sort_by: "pudding"}
+      expect(@characters.valid_attribute(search)).to eq("name")
+    end
+
+    it '.asc_desc happy path' do
+      search = {sort_order: "DESC"}
+      expect(@characters.asc_or_desc(search)).to eq("DESC")
+    end
+
+    it '.asc_desc happy path no input defaults to ASC' do
+      search = {}
+      expect(@characters.asc_or_desc(search)).to eq("ASC")
+    end
+
+    it '.asc_desc sad path defaults to ASC' do
+      search = {sort_order: "colorado"}
+      expect(@characters.asc_or_desc(search)).to eq("ASC")
+    end
+
   end
 end

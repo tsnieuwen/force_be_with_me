@@ -8,7 +8,6 @@ describe "Post searches" do
       CharactersFacade.import_characters
       @characters = Character.all
     end
-
   end
 
   let(:valid_headers) do
@@ -39,7 +38,7 @@ describe "Post searches" do
     expect(response).to_not be_successful
     after_size = Search.all.size
     expect(before_size).to eq(after_size)
-    expect(response.body).to eq("Search could not be executed")
+    expect(response.body).to eq("No records matched the given search")
     expect(response.status).to eq(400)
   end
 
@@ -47,7 +46,7 @@ describe "Post searches" do
     before_size = Search.all.size
     valid_params = {name: 'Will Ferrell'}
     post api_v1_characters_searches_path params: valid_params
-    expect(response).to be_successful
+    expect(response).to_not be_successful
     after_size = Search.all.size
     expect(before_size + 1).to eq(after_size)
     expect(response.body).to eq("No records matched the given search")
