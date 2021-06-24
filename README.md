@@ -1,4 +1,5 @@
 # Force Be With Me
+![](assets/README-98f12721.png)
 
 This API consumes an external Star Wars character API and exposes two sortable and filterable endpoints. The endpoints also return paginated results. This app is deployed to Heroku and was built using Ruby on Rails.
 
@@ -10,7 +11,7 @@ This API consumes an external Star Wars character API and exposes two sortable a
 - [Endpoints](#endpoints)
 - [Models and Schema](#models-and-schema)
 - [Built With](#built-with)
-- [Versioning](#versioning)
+- [Version](#versioning)
 - [Reflection](#reflection)
 
 ## Author
@@ -30,7 +31,7 @@ Thank you to the folks at `SWAPI` for the use of their public API. Documentation
 
 ### Cloning and Setup
 
-- If you wish to install this repo locally, please fork and clone the following repo:
+- If you wish to install this repo locally, please fork and clone the following:
 
     `git clone <git@github.com:<your github handle>/force_be_with_me.git>`
 
@@ -44,7 +45,7 @@ Thank you to the folks at `SWAPI` for the use of their public API. Documentation
 ## Endpoints
 
 ### Get `https://force-be-with-me.herokuapp.com/api/v1/characters`
-- This endpoints returns character records from the database. It is sorted as well as paginated. Default sorting is ascending alphabetically by character name, and default pagination is page 1, twenty records per page. More on that below:
+- This endpoint returns character records from the database. It is sorted as well as paginated. Default sorting is ascending alphabetically by character name, and default pagination is page 1, twenty records per page.
 
 #### Valid Query Parameters
 - name
@@ -71,19 +72,43 @@ Thank you to the folks at `SWAPI` for the use of their public API. Documentation
   - defaults to page 1
 
 #### Example Requests via Postman
+- No params default to alphabetically sorted by name, paginated 20 characters per page
+![](assets/README-9a2f0bd2.png)
+
+- Happy path with valid params
+![](assets/README-d3387786.png)
+
+- Sad path. Similiar request to the one above, only `sort_order` request is invalid and defaults to `ASC`
+![](assets/README-c555a8bb.png)
+
+- Sad path. If a record isn't found the the response if a message informing the user.
+![](assets/README-11df58a7.png)
 
 ### Post `https://force-be-with-me.herokuapp.com/api/v1/characters/searches`
-- Similar to the `GET` endpoint above, this endpoints returns character records from the database. However, this endpoint also creates a search record within the search table of the database, given the search is unique. It is sorted as well as paginated. Default sorting is ascending alphabetically by character name, and default pagination is page 1, twenty records per page. The same query parameter condition with the `GET` request are applied here. Unlike the `GET` request, the status of the response for the `POST` request is a `201`, since a record is created upon successful request.
+- Similar to the `GET` endpoint above, this endpoint returns character records from the database. However, this endpoint also creates a search record within the search table of the database, given the search is unique. It is sorted as well as paginated. Default sorting is ascending alphabetically by character name, and default pagination is page 1, twenty records per page. The same query parameter conditions with the `GET` request are applied here. Unlike the `GET` request, the status of the response for the `POST` request is a `201`, since a record is created upon successful request.
 
 #### Example Requests via Postman
+- 201 response status when search record is saved
+![](assets/README-0d4122bf.png)
+
+- 400 response status if the search isn't unique and couldn't be saved
+![](assets/README-cc93866e.png)
 
 ## Models and Tables
 
 ### Character Model & Table
 - The Character model validates for the presence of all attributes in the schema below, and also validates for uniqueness of the name attribute. The table itself is seeded through the `CharacterFacade` and `CharacterService` files, which consume the external StarWars API.
 
+- Character table portion of schema file
+
+![](assets/README-198e961c.png)
+
 ### Search Model & Table
 - The Search model validates uniqueness of an entire record by scoping. The table is populated via the `post` api request discussed above.
+
+- Search table portion of schema file
+
+![](assets/README-809f47a1.png)
 
 ## Built With
 - Ruby 2.5.3
