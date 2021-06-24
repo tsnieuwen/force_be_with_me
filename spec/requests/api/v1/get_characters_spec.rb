@@ -107,4 +107,12 @@ describe "Get characters" do
     expect(body[:data].last[:id].to_i).to eq(@characters.order(:name)[19].id)
   end
 
+  it "should return an error message if no records are found" do
+    valid_params = {name: "Bono"}
+    get api_v1_characters_path, params: valid_params
+    expect(response).to be_successful
+    expect(response.body).to eq("No records matched the given search")
+  end
+
+
 end
