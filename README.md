@@ -9,9 +9,9 @@ This API consumes an external Star Wars character API and exposes two sortable a
 - [Running Test Suite](#running-tests-suite)
 - [Endpoints](#endpoints)
 - [Models and Schema](#models-and-schema)
-- [Deployment](#deployment)
 - [Built With](#built-with)
 - [Versioning](#versioning)
+- [Reflection](#reflection)
 
 ## Author
 
@@ -20,6 +20,9 @@ This API consumes an external Star Wars character API and exposes two sortable a
   [Tommy's LinkedIn](https://www.linkedin.com/in/thomasnieuwenhuis/)
 
 ## Getting Started
+
+### Thank you  
+Thank you to the folks at `SWAPI` for the use of their public API. Documentation for this API can be found here: https://swapi.dev/
 
 
 ### Prerequisites
@@ -66,3 +69,35 @@ This API consumes an external Star Wars character API and exposes two sortable a
   - defaults to 20 records per page
 - page
   - defaults to page 1
+
+#### Example Requests via Postman
+
+### Post `https://force-be-with-me.herokuapp.com/api/v1/characters/searches`
+- Similar to the `GET` endpoint above, this endpoints returns character records from the database. However, this endpoint also creates a search record within the search table of the database, given the search is unique. It is sorted as well as paginated. Default sorting is ascending alphabetically by character name, and default pagination is page 1, twenty records per page. The same query parameter condition with the `GET` request are applied here. Unlike the `GET` request, the status of the response for the `POST` request is a `201`, since a record is created upon successful request.
+
+#### Example Requests via Postman
+
+## Models and Tables
+
+### Character Model & Table
+- The Character model validates for the presence of all attributes in the schema below, and also validates for uniqueness of the name attribute. The table itself is seeded through the `CharacterFacade` and `CharacterService` files, which consume the external StarWars API.
+
+### Search Model & Table
+- The Search model validates uniqueness of an entire record by scoping. The table is populated via the `post` api request discussed above.
+
+## Built With
+- Ruby 2.5.3
+- Rails 6.1.3.2
+- Heroku
+- PostgreSQL
+
+## Version
+- This is the first verion of the `force-be-with-me` API.
+
+## Reflection
+- Things I would like to further explore with this project:
+  - Caching
+    - Making the app more performant
+  - Database refresh
+    - It would interesting to implement some sort of refresh for the Characters table in the database, since it is seeded directly from the external API. I considered this before starting the project, however, ultimately decided that Star Wars characters do not change often enough to necessitate  implementing this functionality for MVP. That being said, it seems a new Star Wars spin off is produced frequently enough to consider a annual refresh.
+  -Implementing some type of user table or security measures to track who is posting to the searches table.
