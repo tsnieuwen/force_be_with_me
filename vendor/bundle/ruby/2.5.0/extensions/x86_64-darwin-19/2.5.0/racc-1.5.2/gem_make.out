@@ -1,0 +1,16 @@
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/racc-1.5.2/ext/racc/cparse
+/Users/thomasnieuwenhuis/.rbenv/versions/2.5.3/bin/ruby -r ./siteconf20210624-29854-6zr2sc.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20210624-29854-er7ifv/racc

@@ -1,0 +1,15 @@
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.7.5/ext/bootsnap
+/Users/thomasnieuwenhuis/.rbenv/versions/2.5.3/bin/ruby -r ./siteconf20210624-29854-1c7gkmn.rb extconf.rb
+creating Makefile
+
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20210624-29854-1a9ds4g/bootsnap

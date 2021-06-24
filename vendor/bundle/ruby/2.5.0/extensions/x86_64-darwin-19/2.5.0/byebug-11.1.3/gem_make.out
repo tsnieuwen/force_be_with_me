@@ -1,0 +1,19 @@
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.3/ext/byebug
+/Users/thomasnieuwenhuis/.rbenv/versions/2.5.3/bin/ruby -r ./siteconf20210624-29854-1r13e5g.rb extconf.rb
+creating Makefile
+
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/thomasnieuwenhuis/Desktop/Documents/Professional/hotel_engine/force_be_with_me/force_be_with_me/vendor/bundle/ruby/2.5.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20210624-29854-mgd4l1/byebug
