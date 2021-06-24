@@ -47,7 +47,6 @@ describe "Get characters" do
     expect(body[:data].last[:attributes][:eye_color]).to be_a(String)
     expect(body[:data].last[:attributes][:birth_year]).to be_a(String)
     expect(body[:data].last[:attributes][:gender ]).to be_a(String)
-
   end
 
   it "should default to 20 records in return if not otherwise specified" do
@@ -77,8 +76,8 @@ describe "Get characters" do
     get api_v1_characters_path
     expect(response).to be_successful
     body = JSON.parse(response.body, symbolize_names: true)
-    expect(body[:data].first[:id].to_i).to eq(@characters[0].id)
-    expect(body[:data].last[:id].to_i).to eq(@characters[19].id)
+    expect(body[:data].first[:id].to_i).to eq(@characters.order(:name).first.id)
+    expect(body[:data].last[:id].to_i).to eq(@characters.order(:name)[19].id)
   end
 
   it "should return page number based on user specfication" do
@@ -86,8 +85,8 @@ describe "Get characters" do
     get api_v1_characters_path, params: valid_params
     expect(response).to be_successful
     body = JSON.parse(response.body, symbolize_names: true)
-    expect(body[:data].first[:id].to_i).to eq(@characters[20].id)
-    expect(body[:data].last[:id].to_i).to eq(@characters[39].id)
+    expect(body[:data].first[:id].to_i).to eq(@characters.order(:name)[20].id)
+    expect(body[:data].last[:id].to_i).to eq(@characters.order(:name)[39].id)
   end
 
   it "should default to page 1 if user input is invalid" do
@@ -95,8 +94,8 @@ describe "Get characters" do
     get api_v1_characters_path, params: valid_params
     expect(response).to be_successful
     body = JSON.parse(response.body, symbolize_names: true)
-    expect(body[:data].first[:id].to_i).to eq(@characters[0].id)
-    expect(body[:data].last[:id].to_i).to eq(@characters[19].id)
+    expect(body[:data].first[:id].to_i).to eq(@characters.order(:name)[0].id)
+    expect(body[:data].last[:id].to_i).to eq(@characters.order(:name)[19].id)
   end
 
   it "should return records based on two page and per_page params" do
@@ -104,8 +103,8 @@ describe "Get characters" do
     get api_v1_characters_path, params: valid_params
     expect(response).to be_successful
     body = JSON.parse(response.body, symbolize_names: true)
-    expect(body[:data].first[:id].to_i).to eq(@characters[10].id)
-    expect(body[:data].last[:id].to_i).to eq(@characters[19].id)
+    expect(body[:data].first[:id].to_i).to eq(@characters.order(:name)[10].id)
+    expect(body[:data].last[:id].to_i).to eq(@characters.order(:name)[19].id)
   end
 
 end

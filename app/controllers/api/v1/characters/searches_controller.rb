@@ -2,11 +2,11 @@ class Api::V1::Characters::SearchesController < ApplicationController
 
   def create
     search = Search.new(search_params)
-    if search.save
-      searched_characters = Character.discover_characters(params)
-      render json: CharactersSerializer.new(searched_characters)
+    characters = Character.discover_characters(params)
+    if !search.save || characters.empty?
+      render json: "No records matched the given search", status: 400
     else
-      render json: "Search could not be executed", status: 400
+      render json: CharactersSerializer.new(characters), status: 201
     end
   end
 
